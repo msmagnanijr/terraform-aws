@@ -1,0 +1,3 @@
+ami-0a81770a110519caa
+i-00117605cad6ba9bf
+arn:aws:ec2:sa-east-1:596631674148:instance/i-00117605cad6ba9bf

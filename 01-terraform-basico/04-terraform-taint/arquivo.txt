@@ -1,0 +1,7 @@
+curl -X PUT \
+  --data '{"apiVersion":"v1","kind":"Namespace","metadata":{"name":"sonar"},"spec":{"finalizers":[]}}' \
+  -H "Content-Type: application/json" \
+  --cacert /etc/origin/master/ca.crt  \
+  --cert /etc/origin/master/admin.crt \
+  --key /etc/origin/master/admin.key  \
+  'https://master-0.mmagnani.lab:8443/api/v1/namespaces/sonar/finalize'

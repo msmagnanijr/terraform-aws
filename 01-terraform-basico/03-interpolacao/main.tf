@@ -1,0 +1,19 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket-openshift"
+  acl    = "private"
+
+  tags = {
+    Name        = "My bucket Openshift"
+    Environment = "Dev"
+  }
+}
+
+resource "aws_s3_bucket_object" "object" {
+  bucket = "${aws_s3_bucket.b.id}"
+  key    = "ocp.txt"
+  source = "arquivo.txt"
+}
